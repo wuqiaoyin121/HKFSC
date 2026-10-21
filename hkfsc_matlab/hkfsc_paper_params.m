@@ -43,7 +43,7 @@ switch lower(char(regime))
     case 'high'
         p.lambda1 = 100; p.lambda2 = 1e-2; p.kernel.knn = 15;
         p.rho = 0.1; p.adaptive_rho = false;
-        p.outer_iterate_tol = 3e-4;
+        p.outer_iterate_tol = 1e-4;
     otherwise
         error('HKFSC:UnknownRegime', ...
             'Regime must be synthetic, low, medium, or high.');
